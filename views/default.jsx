@@ -1,6 +1,6 @@
 const React = require('react')
 
-function def(html) {
+function Def(html) {
     return (
         <html>
             <head>
@@ -19,6 +19,9 @@ function def(html) {
                         <li>
                             <a href="/places/new">Add Caster</a>
                         </li>
+                        <li>
+                            <a href="/lessons">Lessons</a>
+                        </li>
                     </ul>
                 </nav>
                 {html.children}
@@ -27,4 +30,4 @@ function def(html) {
     )
 }
 
-module.exports = def
+module.exports = Def

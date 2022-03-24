@@ -9,7 +9,7 @@ function home () {
                <div>
                    <img src="/images/hatCard.jpg" alt="Unknown Warlock" />
                    <div>
-                   Photo by <a href="https://unsplash.com/@ah1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Amirhossein Hasani</a> on <a href="https://unsplash.com/s/photos/magician?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                   Photo by <a href="'https://unsplash.com/@ah1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'">Amirhossein Hasani</a> on <a href="https://unsplash.com/s/photos/magician?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                    </div>
                </div>
                <a href="/places">
