@@ -2,6 +2,10 @@ const React = require('react')
 const Def = require('./default')
 
 function lessonHub() {
+    const handleClick = () => {
+        console.log('Hello World')
+    }
+
    return (
        <Def>
            <main>
@@ -13,6 +17,9 @@ function lessonHub() {
                    <div className='user-info'>
                        <img className='avatar-img' src='./assets/person.svg'/>
                        <p>user info goes here</p>
+                        <div className='xp-bar'>
+                           <img src='./assets/XP-Bar.png' />
+                        </div>
                    </div>
                    <form className='subject-select'>
                        <label htmlFor='subject'>Subject</label>
@@ -23,21 +30,27 @@ function lessonHub() {
                        </select>
                    </form>
                </div>
-               <div className='lesson-container'>
-                   <img className='prev-btn' src='./assets/caret-left.svg'></img>
-                    <a href=''>
-                        <div style={{display: 'inline-blocks'}}>
-                       <img className='lesson-img' src='./assets/123.svg'></img>
-                       </div>
-                    </a>
-                    <a href=''>
-                        <img className='lesson-img' src='./assets/code-slash.svg'></img>
-                    </a>
-                    <a href=''>
-                        <img className='lesson-img' src='./assets/terminal.svg'></img>
-                    </a>
-                   <img className='next-btn' src='./assets/caret-right.svg'></img>
-               </div>
+               <div style={{margin: 'auto', textAlign: 'center'}}>
+                    <button onClick={handleClick} className='prev-btn'>
+                            <img className='prev-btn-img' src='./assets/caret-left.svg' />
+                    </button>
+                    <div className='lesson-container'>
+                            <a href=''>
+                                <div style={{display: 'inline-blocks'}}>
+                            <img className='lesson-img' src='./assets/123.svg'></img>
+                            </div>
+                            </a>
+                            <a href=''>
+                                <img className='lesson-img' src='./assets/code-slash.svg'></img>
+                            </a>
+                            <a href=''>
+                                <img className='lesson-img' src='./assets/terminal.svg'></img>
+                            </a>
+                    </div>
+                    <button className='next-btn'>
+                            <img className='next-btn-img' src='./assets/caret-right.svg' />
+                    </button>
+                </div>
            </main>
        </Def>
    )

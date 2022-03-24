@@ -12,18 +12,25 @@ nav{
     margin-top:-3vh
 }
 .lesson-container {
-    display: flex;
-    justify-content: space-evenly;
+    display: inline-flex;
+    width: 70vw;
+    justify-content: space-around;
     text-align: center;
 }
-.lesson-img, .prev-btn, .next-btn{
-    width:5vw
+.lesson-img{
+    width:8vw;
+    margin-top: 1vw;
+}
+.prev-btn-img, .next-btn-img {
+    margin-top: 1vw;
+    width: 6vw;
 }
 .lesson-container a {
     background-color: skyblue;
     border: 1px solid black;
     border-radius: 100%;
-    height: 5vw;
+    height: 10vw;
+    width: 10vw;
 }
 
 .avatar-img {
@@ -46,4 +53,27 @@ nav{
 .user-info p {
     display: inline-block;
     margin-left: 1vw;
+}
+.xp-bar {
+    position: absolute;
+    width: 14%;
+    margin: auto;
+    margin-top: -1.5vh;
+    margin-left: 0.3vw;
+    height: 1vh;
+    border: 1px solid black;
+}
+.xp-bar img {
+    position: relative;
+    top: 0.4vh;
+    margin-top: -1.5vh;
+    margin-left: 0;
+    padding-top: -10vh;
+    z-index: 10;
+    width: 70%;
+    height: 3vh;
+}
+button {
+    width: 5vw;
+    /* border: none; */
 }
