@@ -1,4 +1,22 @@
-/* const mongoose = require('mongoose')
+// Base setup for Mongo integration
+// creator
+// keyword
+// informational
+// mongodb
+
+
+// Documents and prime/foreign keys:
+
+// Creator- 
+
+// Keywords/Type- mongo, express, etc
+
+// Genre- game, tool/resource, lesson
+
+// Title- sortable by all other tables, "master list" of end pages on the site alphabetically by title
+
+
+const mongoose = require('mongoose')
 require('dotenv').config()
 
 mongoose.connect(process.env.MONGO_URI, {
@@ -11,4 +29,4 @@ mongoose.connect(process.env.MONGO_URI, {
 )
 
 
-module.exports.Place = require('./places') */
+module.exports.Title = require('./title')
