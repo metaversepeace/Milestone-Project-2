@@ -1,12 +1,14 @@
+import Def from './default'
 const React = require('react')
-const Def = require('./default')
 
-function lessonHub() {
-    const handleClick = () => {
-        console.log('Hello World')
+export default function LessonHub() {
+    const prevClick = () => {
+        console.log('Previous Button Clicked')
     }
-
-   return (
+    const nextClick = () => {
+        console.log('Next Button Clicked')
+    }
+    return (
        <Def>
            <main>
                <h1 style={{textAlign: 'center'}}>ALL YOUR LESSONS ARE BELONG TO US!</h1>
@@ -31,7 +33,7 @@ function lessonHub() {
                    </form>
                </div>
                <div style={{margin: 'auto', textAlign: 'center'}}>
-                    <button onClick={handleClick} className='prev-btn'>
+                    <button onClick={prevClick} className='prev-btn'>
                             <img className='prev-btn-img' src='./assets/caret-left.svg' />
                     </button>
                     <div className='lesson-container'>
@@ -47,7 +49,7 @@ function lessonHub() {
                                 <img className='lesson-img' src='./assets/terminal.svg'></img>
                             </a>
                     </div>
-                    <button className='next-btn'>
+                    <button onClick={nextClick} className='next-btn'>
                             <img className='next-btn-img' src='./assets/caret-right.svg' />
                     </button>
                 </div>
@@ -55,5 +57,3 @@ function lessonHub() {
        </Def>
    )
 }
-
-module.exports = lessonHub

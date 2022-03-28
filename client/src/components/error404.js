@@ -1,7 +1,7 @@
+import Def from './default'
 const React = require('react')
-const Def = require('./default')
 
-function error404() {
+export default function Error404() {
     return (
         <Def>
             <main>
@@ -15,5 +15,3 @@ function error404() {
         </Def>
     )
 }
-
-module.exports = error404
