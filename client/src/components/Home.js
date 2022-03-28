@@ -1,7 +1,7 @@
+import Def from './default'
 const React = require('react')
-const Def = require('./default')
 
-function home () {
+export default function Home () {
    return (
        <Def>
            <main>
@@ -19,5 +19,3 @@ function home () {
        </Def>
    )
 }
-
-module.exports = home

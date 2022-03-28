@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 const React = require('react')
 
 export default function Def(html) {
@@ -6,16 +7,16 @@ export default function Def(html) {
                 <nav>
                     <ul>
                         <li>
-                            <a href="/">Home</a>
+                            <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <a href="/places">Casters</a>
+                            <Link to="/games">Games</Link>
                         </li>
+                        {/* <li>
+                            <Link to="/places/new">Add Caster</Link>
+                        </li> */}
                         <li>
-                            <a href="/places/new">Add Caster</a>
-                        </li>
-                        <li>
-                            <a href="/lessons">Lessons</a>
+                            <Link to="/lessons">Lessons</Link>
                         </li>
                     </ul>
                 </nav>

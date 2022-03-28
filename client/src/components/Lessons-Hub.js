@@ -1,6 +1,5 @@
 import Def from './default'
 const React = require('react')
-// const Def = require('./default')
 
 export default function LessonHub() {
     const prevClick = () => {
