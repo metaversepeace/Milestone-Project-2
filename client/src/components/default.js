@@ -1,13 +1,8 @@
 const React = require('react')
 
-function Def(html) {
+export default function Def(html) {
     return (
-        <html>
-            <head>
-                <title>Title</title>
-                <link rel="stylesheet" href="/css/style.css" />
-            </head>
-            <body>
+            <>
                 <nav>
                     <ul>
                         <li>
@@ -25,9 +20,6 @@ function Def(html) {
                     </ul>
                 </nav>
                 {html.children}
-            </body>
-        </html>
+            </>
     )
 }
-
-module.exports = Def

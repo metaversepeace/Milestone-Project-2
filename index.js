@@ -1,7 +1,11 @@
 //Modules and Globals
 require('dotenv').config()
 const express = require('express')
+const path = require('path')
+const cors = require('cors')
+
 const app = express()
+app.use(cors())
 
 //Express Settings
 app.set('views', __dirname + '/views')
@@ -14,10 +18,10 @@ app.use(express.urlencoded({ extended: true }))
 //app.use('/places', require('./controllers/places'))
 app.use('/lessons', require('./controllers/lessons'))
 
-
 // GET /
 app.get('/', (req, res) => {
     res.render('home')
+
 })
 
 app.get('*', (req, res) => {

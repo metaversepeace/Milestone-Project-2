@@ -3,7 +3,7 @@ const res = require('express/lib/response')
 const db = require('../models')
 
 router.get('/', (req, res) => {
-    res.render('Lessons-Hub')
+    res.json({message: 'Hello World'})
 })
 
 module.exports = router
