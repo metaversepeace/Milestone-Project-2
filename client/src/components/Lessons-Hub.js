@@ -1,13 +1,41 @@
 import Def from './default'
+import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 const React = require('react')
 
 export default function LessonHub() {
+    const [ data, setData ] = useState(null)
+    const [ subject, setSubject ] = useState('apis')
+    const [ lesson, setLesson ] = useState(2)
+    
     const prevClick = () => {
-        console.log('Previous Button Clicked')
+        if(lesson > 2){
+            setLesson(lesson - 1)
+        }
     }
     const nextClick = () => {
-        console.log('Next Button Clicked')
+        if(lesson < Object.keys(data[subject]).length - 2){
+            setLesson(lesson + 1)
+        }
     }
+    const subjectChange = (e) => {
+        setSubject(e.target.value)
+        setLesson(2)
+    }
+    
+
+    useEffect(() => {
+        fetch('/lessons')
+            .then((res) => res.json())
+            .then((data) => setData(data))
+    }, [])
+    const Lessons = () => {return(
+        <Link to='/lesson1'>
+            <img alt='lesson-1' className='lesson-img' src='./assets/123.svg'/>
+            <p className='lesson-name'>{!data ? 'Lesson 1' : data[subject].lesson1}</p>
+        </Link>
+    )}
+
     return (
        <Def>
            <main>
@@ -17,40 +45,43 @@ export default function LessonHub() {
                </div>
                <div className='ui-container'>
                    <div className='user-info'>
-                       <img className='avatar-img' src='./assets/person.svg'/>
+                       <img alt='avatar' className='avatar-img' src='./assets/person.svg'/>
                        <p>user info goes here</p>
                         <div className='xp-bar'>
-                           <img src='./assets/XP-Bar.png' />
+                           <img alt='current xp' src='./assets/XP-Bar.png' />
                         </div>
                    </div>
                    <form className='subject-select'>
-                       <label htmlFor='subject'>Subject</label>
-                       <select id='subject' name='subject'>
-                           <option value='React'>API's</option>
-                           <option value='React'>React</option>
-                           <option value='React'>SQL</option>
+                       <select className='selected-subject' id='subject' onChange={subjectChange} name='subject'>
+                           <option value='apis'>API's</option>
+                           <option value='react'>React</option>
+                           <option value='sql'>SQL</option>
                        </select>
                    </form>
                </div>
                <div style={{margin: 'auto', textAlign: 'center'}}>
+                   <div>
+                       <h2 className='subject'>{!data ? 'Loading...' : data[subject].name}</h2>
+                   </div>
                     <button onClick={prevClick} className='prev-btn'>
-                            <img className='prev-btn-img' src='./assets/caret-left.svg' />
+                            <img alt='previous button' className='prev-btn-img' src='./assets/caret-left.svg' />
                     </button>
                     <div className='lesson-container'>
-                            <a href=''>
-                                <div style={{display: 'inline-blocks'}}>
-                            <img className='lesson-img' src='./assets/123.svg'></img>
-                            </div>
-                            </a>
-                            <a href=''>
-                                <img className='lesson-img' src='./assets/code-slash.svg'></img>
-                            </a>
-                            <a href=''>
-                                <img className='lesson-img' src='./assets/terminal.svg'></img>
-                            </a>
+                            <Link to={`/lesson${lesson - 1}`}>
+                                <img alt={`lesson ${lesson - 1}`}className='lesson-img' src='./assets/123.svg'/>
+                                <p className='lesson-name'>{!data ? 'Lesson 1' : data[subject]['lesson' + (lesson - 1)]}</p>
+                            </Link>
+                            <Link to={`/lesson${lesson}`}>
+                                <img alt={`lesson ${lesson}`} className='lesson-img' src='./assets/code-slash.svg'/>
+                                <p className='lesson-name'>{!data ? 'Lesson 1' : data[subject]['lesson' + lesson]}</p>
+                            </Link>
+                            <Link to={`/lesson${lesson + 1}`}>
+                                <img alt={`lesson ${lesson + 1}`} className='lesson-img' src='./assets/terminal.svg' />
+                                <p className='lesson-name'>{!data ? 'Lesson 1' : data[subject]['lesson' + (lesson + 1)]}</p>
+                            </Link>
                     </div>
                     <button onClick={nextClick} className='next-btn'>
-                            <img className='next-btn-img' src='./assets/caret-right.svg' />
+                            <img alt='next button' className='next-btn-img' src='./assets/caret-right.svg' />
                     </button>
                 </div>
            </main>

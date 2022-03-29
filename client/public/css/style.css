@@ -77,3 +77,12 @@ button {
     width: 5vw;
     border: none;
 }
+.selected-subject {
+    font-size: 1.5rem;
+}
+.subject {
+    font-size: 2.5rem;
+}
+.lesson-name {
+    font-size: 1.25rem;
+}
