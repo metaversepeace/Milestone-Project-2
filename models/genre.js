@@ -8,6 +8,7 @@ const genreSchema = new mongoose.Schema({
     creator: {type: String, required: true},
     firstPub: {type: String, required: true},
     lastPub: {type: String, required: true},
+    id: {type: String, required: true},
 })
 
 module.exports = mongoose.model('Genre', genreSchema)
