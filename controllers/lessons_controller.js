@@ -2,7 +2,7 @@ const express = require('express')
 const router = require('express').Router()
 const res = require('express/lib/response')
 const db = require('../models')
-const Lesson = require('../models/lesson.js')
+const Lesson = require('../models/lessons.js')
 
 
 //Index Route?
