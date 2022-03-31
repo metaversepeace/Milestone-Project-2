@@ -9,9 +9,9 @@ const { Schema } = mongoose
 const lessonSchema = new Schema({
     name: { type: String, required: true },
     image: { type: String, default: 'http://placehold.it/500x500.png' },
-    baker: {
+    subject: {
       type: Schema.Types.ObjectID,
-      ref: 'Baker'
+      ref: 'Subject'
     }
 });
 
