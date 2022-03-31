@@ -6,7 +6,7 @@ const React = require('react')
 export default function LessonHub() {
     const [ data, setData ] = useState(null)
     const [ subject, setSubject ] = useState('apis')
-    const [ lesson, setLesson ] = useState(2)
+    const [ lesson, setLesson ] = useState(1)
     
     const prevClick = () => {
         if(lesson > 2){
@@ -14,27 +14,21 @@ export default function LessonHub() {
         }
     }
     const nextClick = () => {
-        if(lesson < Object.keys(data[subject]).length - 2){
+        if(lesson < /* Object.keys(data[subject]).length */ Object.keys(data).length - 2){
             setLesson(lesson + 1)
         }
     }
     const subjectChange = (e) => {
         setSubject(e.target.value)
-        setLesson(2)
+        setLesson(1)
     }
     
 
     useEffect(() => {
-        fetch('/lessons')
+        fetch('/lesson_view/lessons')
             .then((res) => res.json())
             .then((data) => setData(data))
     }, [])
-    const Lessons = () => {return(
-        <Link to='/lesson1'>
-            <img alt='lesson-1' className='lesson-img' src='./assets/123.svg'/>
-            <p className='lesson-name'>{!data ? 'Lesson 1' : data[subject].lesson1}</p>
-        </Link>
-    )}
 
     return (
        <Def>
@@ -61,7 +55,7 @@ export default function LessonHub() {
                </div>
                <div style={{margin: 'auto', textAlign: 'center'}}>
                    <div>
-                       <h2 className='subject'>{!data ? 'Loading...' : data[subject].name}</h2>
+                       <h2 className='subject'>{!data ? 'Loading...' : data[lesson].topic}</h2>
                    </div>
                     <button onClick={prevClick} className='prev-btn'>
                             <img alt='previous button' className='prev-btn-img' src='./assets/caret-left.svg' />
@@ -69,15 +63,15 @@ export default function LessonHub() {
                     <div className='lesson-container'>
                             <Link to={`/lesson${lesson - 1}`}>
                                 <img alt={`lesson ${lesson - 1}`}className='lesson-img' src='./assets/123.svg'/>
-                                <p className='lesson-name'>{!data ? 'Lesson 1' : data[subject]['lesson' + (lesson - 1)]}</p>
+                                <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson - 1].title}</p>
                             </Link>
                             <Link to={`/lesson${lesson}`}>
                                 <img alt={`lesson ${lesson}`} className='lesson-img' src='./assets/code-slash.svg'/>
-                                <p className='lesson-name'>{!data ? 'Lesson 1' : data[subject]['lesson' + lesson]}</p>
+                                <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson].title}</p>
                             </Link>
                             <Link to={`/lesson${lesson + 1}`}>
                                 <img alt={`lesson ${lesson + 1}`} className='lesson-img' src='./assets/terminal.svg' />
-                                <p className='lesson-name'>{!data ? 'Lesson 1' : data[subject]['lesson' + (lesson + 1)]}</p>
+                                <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson + 1].title}</p>
                             </Link>
                     </div>
                     <button onClick={nextClick} className='next-btn'>
