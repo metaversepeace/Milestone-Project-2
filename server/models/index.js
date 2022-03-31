@@ -29,7 +29,4 @@ mongoose.connect(process.env.MONGO_URI, {
 )
 
 
-module.exports.Title = require('./title')
-module.exports.Creator = require('./creator')
-module.exports.Keyword = require('./keyword')
-module.exports.Genre = require('./genre')
+module.exports.Lessons = require('./lessons')

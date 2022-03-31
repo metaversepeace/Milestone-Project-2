@@ -2,7 +2,7 @@
 
 const db = require('../models')
 
-db.ID.create([{
+db.Lessons.create([{
     id: '001',
     title: 'React Lesson 1',
     creator: 'Bob Loblaw',
@@ -38,6 +38,7 @@ db.ID.create([{
 }])
 .then(() => {
     console.log('Success!')
+    process.exit()
 })
 .catch(err => {
     console.log('Failure!', err)
