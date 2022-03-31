@@ -1,12 +1,12 @@
 import Def from './default'
-import LessonHub from './Lessons-Hub'
+import LessonsHub from './Lessons-Hub'
 const React = require('react')
 
-export default function Home () {
+export default function Lesson () {
    return (
        <Def>
            <main>
-               <h1>BEWARE, I AM SINNISTAR! THIS IS THE {lesson.title} Lesson!</h1>
+               <h1>This is the {lesson.title} Lesson!</h1>
                <div>
                    <img src="/images/hatCard.jpg" alt="Unknown Warlock" />
                    <div>
@@ -15,9 +15,11 @@ export default function Home () {
                </div>
                <img src={lesson.image} alt={lesson.title} />
             
-               <p>{lesson.content}</p>
+               <p>
+                   {lesson.content}
+               </p>
                 
-               <a href={`/games/${game.id}/show`}><button>Try a Drill?</button></a>   
+               <a href={`/games/${game.id}/show`}><button>Try A Drill?</button></a>   
                
            </main>
        </Def>
