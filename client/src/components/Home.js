@@ -8,8 +8,8 @@ export default function Home () {
                <h1>BEWARE, I AM SINNISTAR! THIS IS THE HOME PAGE VIEW!</h1>
                <div>
                <img className='home-img' alt='an unknown warlock' src='./Images/sinnistar.png'></img>
-                   <div>
-                   Graphic from <a href="'https://unsplash.com/@ah1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'">ESWAT</a> on <a href="https://unsplash.com/s/photos/magician?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">SEGA Genesis</a>
+                   <div className='credit'>
+                   Graphic from <a href="'https://unsplash.com/@ah1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'" className='credit'>ESWAT</a> on <a href="https://unsplash.com/s/photos/magician?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" className='credit'>SEGA Genesis</a>
                    </div>
                </div>
                <a href="/places">

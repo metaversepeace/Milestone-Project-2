@@ -51,7 +51,7 @@ nav {
     text-align: center;
     margin-top:-4.9vh;
     margin-bottom:-6.3vh;
-    background-color: #022106;
+    background-color: #212121;
     /*background-image: linear-gradient(#013220, #013220, #1A3805, #013220, #013220, #013220, #013220, #013220, #1A3805, #1B3905, #1B3905, #1B3905, #1B3905, #31961F,#55620F, #1B3905,  #1A3805, #1B3905, #1A3805, #1B3905, #1A3805, #1B3905, #1B3905, #013220, #013220, #013220);*/
 }
 
@@ -67,6 +67,11 @@ nav {
 
 .home-img {
    
+}
+
+.credit {
+    text-decoration: none;
+    margin-bottom: 0.5em;
 }
 
 .lesson-main {
@@ -145,6 +150,12 @@ nav {
     width: 70%;
     height: 3vh;
 }
+
+.btn-primary {
+    color: white;
+    background-color: #212121;
+}
+
 button {
     width: 5vw;
     border: none;
