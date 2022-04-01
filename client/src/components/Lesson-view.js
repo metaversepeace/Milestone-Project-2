@@ -6,11 +6,11 @@ export default function Lesson () {
    return (
        <Def>
            <main className='lesson-view'>
-               <h1>This is the {lesson.title} Lesson!</h1>
+               <h1>This is the {lesson.subject} module!</h1>
                <div>
                    {/*lesson here*/}
                </div>
-               <img src={lesson.image} alt={lesson.title} />
+               <img src={lesson.image} alt={lesson.subject} />
             
                <p>
                    {lesson.content}

@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 //SEED Route
 router.get('/data/seed', (req, res) => {
-    Lesson.insertMany([
+    Game.insertMany([
       {
         type: 'Trivia Games',
         subject: [],
