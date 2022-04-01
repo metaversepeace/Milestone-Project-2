@@ -4,7 +4,7 @@ const React = require('react')
 export default function Home () {
    return (
        <Def>
-           <main>
+           <main className='home'>
                <h1>BEWARE, I AM SINNISTAR! THIS IS THE HOME PAGE VIEW!</h1>
                <div>
                    <img src="/images/hatCard.jpg" alt="Unknown Warlock" />

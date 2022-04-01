@@ -6,16 +6,30 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-size: 1.5rem;
+    
 }
-nav{
+nav {
     text-align: center;
-    margin-top:-3vh
+    margin-top:-3vh;
+    margin-bottom:-3vh;
+    background-color: red;
 }
+
+.home {
+    background-color: yellow;
+    text-align: center;
+}
+
+.lesson-main {
+    background-color: yellow;
+}
+
 .lesson-container {
     display: inline-flex;
     width: 70vw;
     justify-content: space-around;
     text-align: center;
+    background-color: orange;
 }
 .lesson-img{
     width:8vw;
@@ -44,15 +58,18 @@ nav{
     padding-left: 10vw;
     padding-right: 10vw;
     margin-bottom: 2vh;
+    background-color: skyblue;
 }
 
 .user-info {
     width: 15vw;
-    border: 1px solid black
+    border: 1px solid black;
+    background-color: red;
 }
 .user-info p {
     display: inline-block;
     margin-left: 1vw;
+    background-color: purple;
 }
 .xp-bar {
     position: absolute;
@@ -62,6 +79,7 @@ nav{
     margin-left: 0.3vw;
     height: 1vh;
     border: 1px solid black;
+    background-color: green;
 }
 .xp-bar img {
     position: relative;
@@ -76,4 +94,10 @@ nav{
 button {
     width: 5vw;
     border: none;
+    background-color: grey;
+}
+
+.games-hub {
+    background-color: yellow;
+    text-align: center;
 }
