@@ -2,7 +2,7 @@ const express = require('express')
 const router = require('express').Router()
 const res = require('express/lib/response')
 const db = require('../models')
-const Game = require('../models/lessons.js')
+const Game = require('../models/games.js')
 
 
 //Index Route?
@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 //SEED Route
 router.get('/data/seed', (req, res) => {
-    Lesson.insertMany([
+    Game.insertMany([
       {
         type: 'Trivia Games',
         subject: [],
