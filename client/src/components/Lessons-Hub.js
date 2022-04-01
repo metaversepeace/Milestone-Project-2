@@ -39,14 +39,17 @@ export default function LessonHub() {
                     <div className='lesson-container'>
                             <a href=''>
                                 <div style={{display: 'inline-blocks'}}>
-                            <img className='lesson-img' src='./assets/123.svg'></img>
+                            <img className='lesson-img' src='./Images/mongoDB.png'></img>
                             </div>
                             </a>
                             <a href=''>
-                                <img className='lesson-img' src='./assets/code-slash.svg'></img>
+                            <img className='lesson-img' src='./Images/express.png'></img>
                             </a>
                             <a href=''>
-                                <img className='lesson-img' src='./assets/terminal.svg'></img>
+                            <img className='lesson-img' src='./Images/react.png'></img>
+                            </a>
+                            <a href=''>
+                            <img className='lesson-img' src='./Images/node.png'></img>
                             </a>
                     </div>
                     <button onClick={nextClick} className='next-btn'>
