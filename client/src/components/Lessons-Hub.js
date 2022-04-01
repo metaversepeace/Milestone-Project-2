@@ -11,7 +11,7 @@ export default function LessonHub() {
     return (
        <Def>
            <main className='lesson-main'>
-               <h1 style={{textAlign: 'center'}}>ALL YOUR LESSONS ARE BELONG TO US!</h1>
+               <h1 style={{textAlign: 'center'}}>ALL YOUR LESSONS BELONG TO US!</h1>
                <div>
                    <img style={{width: '20vw', marginLeft: '40vw'}} src="https://cdn.vox-cdn.com/thumbor/LkWqXsl11wI-1gU9OnoflNoWDVI=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22309695/all_your_base_are_belong_to_us.jpg" alt="Unknown Warlock" />
                </div>

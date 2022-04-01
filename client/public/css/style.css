@@ -1,27 +1,63 @@
+@font-face {
+    font-family: "AltRetroThin";
+    src: local("AltRetroThin"),
+      url("./fonts/Alt_Retro_Thin.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "AltRetroRegular";
+    src: local("AltRetroRegular"),
+      url("./fonts/Alt_Retro_Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "AtariClassicChunky";
+    src: local("AtariClassicChunky"),
+      url("./fonts/Atari_Classic_Chunky.ttf") format("truetype");
+    font-weight: normal;
+}
+
 nav ul li {
     list-style: none;
     display: inline-block;
     margin: 2vw;
+
 }
+
 nav ul li a {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 4em;
+    font-family: AltRetroThin;
+    font-weight: 600;
+    background: -webkit-linear-gradient(#FFFF33, #FF0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
     
 }
+
 nav {
     text-align: center;
     margin-top:-3vh;
-    margin-bottom:-3vh;
-    background-color: red;
+    margin-bottom:-4vh;
+    background-color: #023020;
 }
 
 .home {
-    background-color: yellow;
+    background-image: linear-gradient(red, yellow);
     text-align: center;
+    font-family: AtariClassicChunky;
+    font-size: 0.8em;
+    padding-top: 1em;
 }
 
 .lesson-main {
-    background-color: yellow;
+    background-image: linear-gradient(#8DD3FB, #5180ED, #301D87, #8DD3FB, #7674BC, #5180ED, #301D87, #eb98fc, #c25bee, #301D87, #f89f9f, #a71512, #f89f9f, #a71512,#fac466, #f09917, #a71512, #fac466, #f09917, #a71512, #b2e74c, 
+    #e0a352, #1a3805, #b2e74c, #31961f, #1a3805, #8ee822, #31961f, #1a3805);    
+    font-family: AtariClassicChunky;
+    font-size: 0.8em;
+    padding-top: 0.8em;
 }
 
 .lesson-container {
@@ -99,5 +135,8 @@ button {
 
 .games-hub {
     background-color: yellow;
+    padding-top: 0.8em;
     text-align: center;
+    font-family: AtariClassicChunky;
+    font-size: 0.8em;
 }
