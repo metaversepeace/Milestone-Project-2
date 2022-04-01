@@ -17,10 +17,10 @@ export default function LessonHub() {
                </div>
                <div className='ui-container'>
                    <div className='user-info'>
-                       <img className='avatar-img' src='./assets/person.svg'/>
+                       <img className='avatar-img' src='./Images/person.svg'/>
                        <p>user info goes here</p>
                         <div className='xp-bar'>
-                           <img src='./assets/XP-Bar.png' />
+                           <img src='./Images/XP-Bar.png' />
                         </div>
                    </div>
                    <form className='subject-select'>
@@ -34,7 +34,7 @@ export default function LessonHub() {
                </div>
                <div style={{margin: 'auto', textAlign: 'center'}}>
                     <button onClick={prevClick} className='prev-btn'>
-                            <img className='prev-btn-img' src='./assets/caret-left.svg' />
+                            <img className='prev-btn-img' src='./Images/caret-left.svg' />
                     </button>
                     <div className='lesson-container'>
                             <a href="/Lesson-view">
@@ -53,7 +53,7 @@ export default function LessonHub() {
                             </a>
                     </div>
                     <button onClick={nextClick} className='next-btn'>
-                            <img className='next-btn-img' src='./assets/caret-right.svg' />
+                            <img className='next-btn-img' src='./Images/caret-right.svg' />
                     </button>
                 </div>
            </main>
