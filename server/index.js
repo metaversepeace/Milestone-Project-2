@@ -1,26 +1,33 @@
-const express = require('express');
-const path = require('path');
-const cors = require('cors');
+//Modules and Globals
+require('dotenv').config()
+const express = require('express')
+const path = require('path')
+const cors = require('cors')
 
-const PORT = process.env.PORT || 5000;
+const app = express()
+app.use(cors())
 
-const app = express ();
+//Express Settings
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
+// app.engine('jsx', require('express-react-views').createEngine())
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
 
-app.use(cors());
+//Controllers & Routes
+app.use('/lesson_view', require('./controllers/lessons'))
 
-//Have Node serve the files for our built React app
-app.use(express.static(path.resolve(_dirname, '../client')));
 
-//Handle GET requests to /api route
-app.get('/api', (req, res) => {
-  res.join({message: 'Hello from server!'});
-});
+// GET /
+app.get('/', (req, res) => {
+    res.render('home')
 
-//All other get requests not handled before will return our React app
+})
+
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(_dirname, '../client', 'index.html'));
-});
+    res.render('error404')
+})
 
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
-});
+app.listen(process.env.PORT, function (){
+    console.log("I LIVE AGAIN!")
+})
