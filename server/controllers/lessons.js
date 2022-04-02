@@ -2,6 +2,10 @@ const router = require('express').Router()
 const res = require('express/lib/response')
 const db = require('../models')
 
+//Do we need this?
+//const Lesson = require('../models/lessons.js')
+
+
 //Add lesson
 router.post('/', (req, res) => {
     db.Lessons.create(req.body)
