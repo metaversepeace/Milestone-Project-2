@@ -2,36 +2,52 @@ const router = require('express').Router()
 const res = require('express/lib/response')
 const db = require('../models')
 
-router.get('/', (req, res) => {
-    res.json({
-        apis: {
-            name: "API's",
-            lesson1: "Using API's",
-            lesson2: "Creating API's",
-            lesson3: "Something else",
-            lesson4: 'Lesson 4',
-            lesson5: 'Lesson 5',
-            lesson6: 'You guessed it, Lesson 6'
-        },
-        react: {
-            name: "React",
-            lesson1: "What is React",
-            lesson2: "What it does",
-            lesson3: "Now you know React",
-            lesson4: 'Lesson 4'
-        },
-        sql: {
-            name: "SQL",
-            lesson1: "Structured",
-            lesson2: "Query",
-            lesson3: "Language",
-            lesson4: 'Lesson 4',
-            lesson5: 'Lesson 5'
-        }
+//Add lesson
+router.post('/', (req, res) => {
+    db.Lessons.create(req.body)
+        .catch( err => {
+            if(err && err.name == 'ValidationError'){
+                let message = ''
+                for(var field in err.errors) {
+                    message += `${err.errors[field].message}`
+                }
+                console.log('Validation error message', message)
+            }
+        })
+})
+
+//Edit lesson
+router.get('/:id/edit', (req, res) => {
+    db.Lessons.findById(req.params.id)
+        .then(lesson => res.json(lesson))
+        .catch( err => {
+            console.log(err)
+        })
+})
+router.put('/:id', (req,res) => {
+    db.Lessons.findByIdAndUpdate(req.params.id, req.body)
+    .catch( err => {
+        console.log('err', err)
     })
 })
 
-router.get('/lessons', (req, res) => {
+//View Lesson
+router.get('/:id', (req, res) => {
+    db.Lessons.findById(req.params.id)
+        .catch( err => {
+            console.log('err', err)
+        })
+})
+
+//Delete Lesson
+router.delete('/:id', (req, res) => {
+    db.Lessons.findByIdAndDelete(req.params.id)
+        .catch( err => {
+            console.log('err', err)
+        })
+})
+
+router.get('/', (req, res) => {
     db.Lessons.find()
         .then((lessons) => {
             res.json(lessons)
@@ -40,5 +56,7 @@ router.get('/lessons', (req, res) => {
             console.log(err)
         })
 })
+
+
 
 module.exports = router

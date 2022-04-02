@@ -1,5 +1,3 @@
-// Currently throws error saying create cannot be called on undefined
-
 const db = require('../models')
 
 db.Lessons.create([{

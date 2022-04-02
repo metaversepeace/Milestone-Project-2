@@ -25,7 +25,7 @@ export default function LessonHub() {
     
 
     useEffect(() => {
-        fetch('/lesson_view/lessons')
+        fetch('/lessons')
             .then((res) => res.json())
             .then((data) => setData(data))
     }, [])

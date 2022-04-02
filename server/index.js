@@ -15,7 +15,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
 //Controllers & Routes
-app.use('/lesson_view', require('./controllers/lessons'))
+app.use('/lessons', require('./controllers/lessons'))
 
 
 // GET /
