@@ -2,9 +2,6 @@ const router = require('express').Router()
 const res = require('express/lib/response')
 const db = require('../models')
 
-//Do we need this?
-//const Lesson = require('../models/lessons.js')
-
 
 //Add lesson
 router.post('/', (req, res) => {
@@ -28,7 +25,7 @@ router.get('/:id/edit', (req, res) => {
             console.log(err)
         })
 })
-router.put('/:id', (req,res) => {
+router.post('/:id', (req,res) => {
     db.Lessons.findByIdAndUpdate(req.params.id, req.body)
     .catch( err => {
         console.log('err', err)

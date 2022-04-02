@@ -1,10 +1,10 @@
 import Def from './default'
 import LessonsHub from './Lessons-Hub'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 const React = require('react')
 
-export default function Lesson (props) {
+export default function Lesson () {
     let { id } = useParams()
     const [lesson, setLesson ] = useState({})
     useEffect(() => {
@@ -24,7 +24,9 @@ export default function Lesson (props) {
                <p>
                    {lesson.content}
                </p>
-                
+                <Link to={`/lessons/${id}/edit`}>
+                    <button>Edit</button>    
+                </Link>
                {/* <a href={`/games/${game.id}/show`} className='btn-primary'><button>Try A Drill?</button></a>    */}
                
            </main>

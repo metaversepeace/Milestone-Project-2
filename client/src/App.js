@@ -5,6 +5,7 @@ import GamesHub from './components/Games-Hub';
 import Home from './components/Home';
 import Lesson from './components/Lesson-view';
 import LessonHub from './components/Lessons-Hub';
+import EditForm from './components/Lessons/edit';
 
 function App() {
   return (
@@ -13,10 +14,9 @@ function App() {
         <Routes>
           <Route path='*' element={<Error404 />}/>
           <Route path='/' element={<Home />} />
-          <Route path='/lessons' element={<LessonHub />}>
-            {/* <Route path=':id' element={<Lesson />} /> */}
-          </Route>
+          <Route path='/lessons' element={<LessonHub />} />
           <Route path='/lessons/:id' element={<Lesson />} />
+          <Route path='/lessons/:id/edit' element={<EditForm />} />
           <Route path='/games' element={<GamesHub />} />
         </Routes>
       </header>
