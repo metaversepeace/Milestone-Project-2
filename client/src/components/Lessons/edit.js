@@ -108,6 +108,7 @@ export default function EditForm (data) {
                         required />
 
                 </div>
+            
 
             </div>
             <button type='Submit' >Submit</button>

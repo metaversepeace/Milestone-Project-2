@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import Error404 from './components/error404';
 import GamesHub from './components/Games-Hub';
@@ -6,6 +5,7 @@ import Home from './components/Home';
 import Lesson from './components/Lesson-view';
 import LessonHub from './components/Lessons-Hub';
 import EditForm from './components/Lessons/edit';
+import NewForm from './components/Lessons/new';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
           <Route path='/lessons' element={<LessonHub />} />
           <Route path='/lessons/:id' element={<Lesson />} />
           <Route path='/lessons/:id/edit' element={<EditForm />} />
+          <Route path='/lessons/new' element={<NewForm />} />
           <Route path='/games' element={<GamesHub />} />
         </Routes>
       </header>

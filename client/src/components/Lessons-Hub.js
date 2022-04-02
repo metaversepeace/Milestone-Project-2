@@ -58,7 +58,7 @@ export default function LessonHub() {
                        <h2 className='subject'>{!data ? 'Loading...' : data[lesson].topic}</h2>
                    </div>
                     <button onClick={prevClick} className='prev-btn'>
-                            <img alt='previous button' className='prev-btn-img' src='./assets/caret-left.svg' />
+                            <img alt='previous button' className='prev-btn-img' src='../Images/caret-left.svg' />
                     </button>
                     <div className='lesson-container'>
                             <Link to={`/lessons/${!data ? 'error':data[lesson - 1]._id}`}>
@@ -75,8 +75,13 @@ export default function LessonHub() {
                             </Link>
                     </div>
                     <button onClick={nextClick} className='next-btn'>
-                            <img alt='next button' className='next-btn-img' src='./assets/caret-right.svg' />
+                            <img alt='next button' className='next-btn-img' src='../Images/caret-right.svg' />
                     </button>
+
+                    <Link to={`/lessons/new`}>
+                    <button>Add Lesson</button>    
+                    </Link>
+                
                 </div>
            </main>
        </Def>
