@@ -61,15 +61,15 @@ export default function LessonHub() {
                             <img alt='previous button' className='prev-btn-img' src='./assets/caret-left.svg' />
                     </button>
                     <div className='lesson-container'>
-                            <Link to={`/lesson${lesson - 1}`}>
+                            <Link to={`/lessons/${!data ? 'error':data[lesson - 1]._id}`}>
                                 <img alt={`lesson ${lesson - 1}`}className='lesson-img' src='./assets/123.svg'/>
                                 <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson - 1].title}</p>
                             </Link>
-                            <Link to={`/lesson${lesson}`}>
+                            <Link to={`/lessons/${!data ? 'error':data[lesson]._id}`}>
                                 <img alt={`lesson ${lesson}`} className='lesson-img' src='./assets/code-slash.svg'/>
                                 <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson].title}</p>
                             </Link>
-                            <Link to={`/lesson${lesson + 1}`}>
+                            <Link to={`/lessons/${!data ? 'error':data[lesson + 1]._id}`}>
                                 <img alt={`lesson ${lesson + 1}`} className='lesson-img' src='./assets/terminal.svg' />
                                 <p className='lesson-name'>{!data ? 'Lesson 1' : data[lesson + 1].title}</p>
                             </Link>
