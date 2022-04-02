@@ -2,7 +2,7 @@ const express = require('express')
 const router = require('express').Router()
 const res = require('express/lib/response')
 const db = require('../models')
-const Lesson = require('../models/lessons')
+const Lesson = require('../models/lessons.js')
 
 
 //Index Route?
@@ -47,6 +47,7 @@ router.get('/data/seed', (req, res) => {
       .then(createdLessons => {
         res.redirect('/router')
       })
-  })
+  });
+
 
 module.exports = router
