@@ -34,6 +34,7 @@ router.put('/:id', (req,res) => {
 //View Lesson
 router.get('/:id', (req, res) => {
     db.Lessons.findById(req.params.id)
+        .then(lesson => res.json(lesson))
         .catch( err => {
             console.log('err', err)
         })
