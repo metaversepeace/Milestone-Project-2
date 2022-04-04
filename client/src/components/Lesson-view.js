@@ -1,5 +1,4 @@
 import Def from './default'
-import LessonsHub from './Lessons-Hub'
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 const React = require('react')
@@ -12,6 +11,7 @@ export default function Lesson () {
             .then((res) => res.json())
             .then((lesson) => setLesson(lesson))
     })
+
    return (
        <Def>
            <main className='lesson-view'>
@@ -24,9 +24,11 @@ export default function Lesson () {
                <p>
                    {lesson.content}
                </p>
+
                 <Link to={`/lessons/${id}/edit`}>
                     <button>Edit</button>    
                 </Link>
+
                {/* <a href={`/games/${game.id}/show`} className='btn-primary'><button>Try A Drill?</button></a>    */}
                
            </main>

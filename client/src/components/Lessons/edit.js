@@ -48,6 +48,7 @@ export default function EditForm (data) {
                         required />
 
                 </div>
+                
                 <div className="form-group col-sm-6">
           
                     <label htmlFor="title">Creator</label>
@@ -60,6 +61,7 @@ export default function EditForm (data) {
                         required />
 
                 </div>
+
                 <div className="form-group col-sm-6">
           
                     <label htmlFor="title">Contains React?</label>
@@ -72,6 +74,7 @@ export default function EditForm (data) {
                         required />
 
                 </div>
+
                 <div className="form-group col-sm-6">
           
                     <label htmlFor="title">Contains Mongo?</label>
@@ -84,6 +87,7 @@ export default function EditForm (data) {
                         required />
 
                 </div>
+
                 <div className="form-group col-sm-6">
           
                     <label htmlFor="title">Contains Express?</label>
@@ -96,6 +100,7 @@ export default function EditForm (data) {
                         required />
 
                 </div>
+
                 <div className="form-group col-sm-6">
           
                     <label htmlFor="title">Content</label>
