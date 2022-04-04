@@ -7,6 +7,7 @@ const methodOverride = require('method-override')
 
 const app = express()
 app.use(cors())
+require('dotenv').config()
 
 //Express Settings
 app.set('views', __dirname + '/views')
