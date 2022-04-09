@@ -23,7 +23,6 @@
   "homepage": "https://github.com/Wyatt-Hart/Milestone-2-Project#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
-    "cool-ascii-faces": "^1.3.4",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
@@ -32,9 +31,8 @@
     "inherits": "^2.0.4",
     "jsx": "^0.9.89",
     "method-override": "^3.0.0",
-    "mongoose": "^6.2.8",
+    "mongoose": "^6.2.10",
     "nodemon": "^2.0.15",
-    "path-to-regexp": "^6.2.0",
-    "react-dom": "^17.0.2"
+    "path-to-regexp": "^6.2.0"
   }
 }
