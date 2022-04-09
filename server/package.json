@@ -1,5 +1,5 @@
 {
-  "name": "milestone-2-project",
+  "name": "serene-sands-83215",
   "version": "1.0.0",
   "engines": {
     "node": "17.4.0"
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Wyatt-Hart/Milestone-2-Project.git"
+    "url": "git+https://git.heroku.com/serene-sands-83215.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Wyatt-Hart/Milestone-2-Project/issues"
   },
-  "homepage": "https://github.com/Wyatt-Hart/Milestone-2-Project#readme",
+  "homepage": "https://serene-sands-83215.herokuapp.com",
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
