@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Wyatt-Hart/Milestone-2-Project/issues"
   },
-  "homepage": "https://serene-sands-83215.herokuapp.com",
+  "homepage": "https://github.com/metaversepeace/Milestone-Project-2/blob/main/README.md",
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
