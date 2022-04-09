@@ -21,7 +21,7 @@ app.use(methodOverride('_method'));
 app.engine('jsx', require('express-react-views').createEngine());
 
 //Controllers & Routes
-app.use('/lessons', require('./controllers/lessons'));
+app.use('/lessons', require('../controllers/lessons'));
 
 
 // GET /
