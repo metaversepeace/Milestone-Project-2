@@ -1,5 +1,5 @@
 {
-  "name": "serene-sands-83215",
+  "name": "fierce-basin-75884",
   "version": "1.0.0",
   "engines": {
     "node": "17.4.0"
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git.heroku.com/serene-sands-83215.git"
+    "url": "git+https://git.heroku.com/fierce-basin-75884.git"
   },
   "author": "",
   "license": "ISC",
